@@ -40,15 +40,13 @@ console.log(reverseString("EPICODE"))
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */const upperFirst = function (str) {
-    let firstChar = charAt(0);
+    let firstChar = str.charAt(0)
     let firstCharUpperCase = firstChar.toUpperCase()
-    let cutString = str.slice(0)
-    let finalString = firstCharUpperCase + cutString
+    let cutString = str.slice(1)
+    return firstCharUpperCase + cutString
 }
 
 console.log(upperFirst("ciao"))
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
@@ -56,6 +54,15 @@ console.log(upperFirst("ciao"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const giveMeRandom = function (n) {
+    const arr = []
+    for (let i = 0; i <= n; i++) {
+    arr.push(Math.floor(Math.random() * 10))
+    }
+    return arr
+}
+
+console.log(giveMeRandom(6))
 //EXTRA:
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
